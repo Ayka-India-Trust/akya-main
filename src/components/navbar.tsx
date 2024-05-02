@@ -13,6 +13,7 @@ import { AiOutlineClose } from "react-icons/ai";
 import { useAutoAnimate } from "@formkit/auto-animate/react";
 import { Button } from "./ui/button";
 import { ArrowRightIcon } from "lucide-react";
+import { LoginButton } from "./auth/login-button";
 
 type NavItem = {
   label: string;
@@ -137,7 +138,9 @@ export default function Navbar() {
 
       {/* right side data */}
       <section className=" hidden md:flex items-center gap-8 ">
-        <Button variant={"gooeyLeft"}>Login</Button>
+        <LoginButton mode="redirect">
+          <Button variant={"gooeyLeft"}>Login</Button>
+        </LoginButton>
 
         <Button
           variant="expandIcon"
@@ -183,9 +186,11 @@ function MobileNav({ closeSideMenu }: { closeSideMenu: () => void }) {
         </div>
 
         <section className="  flex flex-col gap-8 mt-4 items-center">
-          <Button variant={"gooeyLeft"} className="w-full">
-            Login
-          </Button>
+          <LoginButton mode="redirect">
+            <Button variant={"gooeyLeft"} className="w-full">
+              Login
+            </Button>
+          </LoginButton>
 
           <Button
             variant="expandIcon"
