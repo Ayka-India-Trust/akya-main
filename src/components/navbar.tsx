@@ -185,7 +185,7 @@ function MobileNav({ closeSideMenu }: { closeSideMenu: () => void }) {
           ))}
         </div>
 
-        <section className="  flex flex-col gap-8 mt-4 items-center">
+        <section className="flex flex-col gap-8 mt-4 items-center">
           <LoginButton mode="redirect">
             <Button variant={"gooeyLeft"} className="w-full">
               Login

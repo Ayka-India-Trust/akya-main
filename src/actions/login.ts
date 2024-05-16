@@ -9,7 +9,6 @@ export const login = async (request: z.infer<typeof LoginSchema>) => {
       error: "Invalid schema.",
     };
   }
-
   return {
     success: "Login successful.",
   };
