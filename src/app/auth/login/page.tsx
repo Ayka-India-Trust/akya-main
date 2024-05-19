@@ -7,9 +7,7 @@ export default function LoginPage() {
       <div className="hidden sm:block bg-red-800 w-[400px] h-[430px] border rounded-lg">
         ...
       </div>
-      <div className="">
-        <LoginForm />
-      </div>
+      <LoginForm />
     </div>
   );
 }
