@@ -54,7 +54,7 @@ export function LoginForm() {
       backButtonHref="/auth/register"
     >
       <Form {...form}>
-        <form className="space-y-6" onClick={form.handleSubmit(onSubmit)}>
+        <form className="space-y-6" onSubmit={form.handleSubmit(onSubmit)}>
           <div className="space-y-4">
             <FormField
               control={form.control}
