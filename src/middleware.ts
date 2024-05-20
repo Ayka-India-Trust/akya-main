@@ -33,7 +33,7 @@ export default auth((req) => {
     return Response.redirect(new URL("/auth/login", nextUrl));
   }
 
-  return null;
+  return null as any;
 });
 
 // Optionally, don't invoke Middleware on some paths
