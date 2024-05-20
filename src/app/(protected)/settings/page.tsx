@@ -5,7 +5,7 @@ import { Button } from "@/components/ui/button";
 export default async function SettingsPage() {
   const session = await auth();
   return (
-    <div>
+    <div className="overflow-x-auto text-wrap">
       {JSON.stringify(session)}
       <form
         action={async () => {

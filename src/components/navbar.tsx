@@ -14,6 +14,7 @@ import { useAutoAnimate } from "@formkit/auto-animate/react";
 import { Button } from "./ui/button";
 import { ArrowRightIcon } from "lucide-react";
 import { LoginButton } from "./auth/login-button";
+import { useRouter } from "next/navigation";
 
 type NavItem = {
   label: string;
@@ -64,8 +65,8 @@ const navItems: NavItem[] = [
     ],
   },
   {
-    label: "Careers",
-    link: "#",
+    label: "events",
+    link: "/events",
   },
   {
     label: "About",
@@ -76,6 +77,7 @@ const navItems: NavItem[] = [
 export default function Navbar() {
   const [animationParent] = useAutoAnimate();
   const [isSideMenuOpen, setSideMenue] = useState(false);
+  const router = useRouter();
   function openSideMenu() {
     setSideMenue(true);
   }
@@ -146,6 +148,9 @@ export default function Navbar() {
           variant="expandIcon"
           Icon={ArrowRightIcon}
           iconPlacement="right"
+          onClick={() => {
+            router.push("/auth/register");
+          }}
         >
           Register
         </Button>
@@ -160,6 +165,7 @@ export default function Navbar() {
 }
 
 function MobileNav({ closeSideMenu }: { closeSideMenu: () => void }) {
+  const router = useRouter();
   return (
     <div
       suppressHydrationWarning
@@ -187,7 +193,11 @@ function MobileNav({ closeSideMenu }: { closeSideMenu: () => void }) {
 
         <section className="flex flex-col gap-8 mt-4 items-center">
           <LoginButton mode="redirect">
-            <Button variant={"gooeyLeft"} className="w-full">
+            <Button
+              variant={"gooeyLeft"}
+              className="w-full"
+              onClick={closeSideMenu}
+            >
               Login
             </Button>
           </LoginButton>
@@ -197,6 +207,10 @@ function MobileNav({ closeSideMenu }: { closeSideMenu: () => void }) {
             className="w-full"
             Icon={ArrowRightIcon}
             iconPlacement="right"
+            onClick={() => {
+              closeSideMenu();
+              router.push("/auth/register");
+            }}
           >
             Register
           </Button>
