@@ -41,7 +41,7 @@ export function LoginForm() {
       login(data).then((res) => {
         if (res) {
           setError(res.error);
-          setSuccess(res.success || "");
+          setSuccess(res.success);
         }
       });
     });
