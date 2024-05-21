@@ -1,36 +1,43 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+## Stuff to implement
 
-## Getting Started
+### Landing Page
 
-First, run the development server:
+- [ ] footer
+- [x] hamburger menu
+- [x] navbar
+- [ ] gallery page
+- [ ] insta story thing
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+### Auth related
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+- [x] Login page
+- [ ] registration page ui fix
+- [x] db connect
+- [x] forgot password ui
+- [ ] resend mails for forgot password ( need domain config of that )
+- [x] shadcn integration
+- [x] next auth
+- [ ] settings page
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### Events page
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+- [ ] make the events page ui
+- [ ] events db
+- [ ] events dashboard for the admins ( admin wala role thing is still not configured)
+- [ ] mail for events
 
-## Learn More
+### Admin dashboard
 
-To learn more about Next.js, take a look at the following resources:
+- [ ] volunteer list - can perform crud ops
+- [ ] events list page with cruds ops
+- [ ] new registrations to finalise ( donno how to do that )
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Volunteer dashobard
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+- [ ] Volunteer leaderboard ( criteria ??)
 
-## Deploy on Vercel
+### general things
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+- [ ] write github actions from scratch to save 20 bucks per month for enterpise deployments
+- [ ] consider cloudfare funcs for edge tasks
+- [ ] Sentry
